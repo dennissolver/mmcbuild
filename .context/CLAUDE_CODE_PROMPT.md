@@ -7,9 +7,9 @@ MMC Build Pty Ltd (ABN client engagement GBTA-MMC-2026-001).
 ## Rules
 
 1. Read .context/PROJECT_STATE.md first, every session, no exceptions
-2. Only implement items marked "Accept" in the Dennis Decision column
-   of feedback docs — never act on Pending or unreviewed items
-3. Never touch feedback/ or .context/ files — Dennis owns those
+2. Only implement GitHub Issues labelled `accept` by Dennis —
+   never act on issues labelled `pending-review`, `reject`, or `defer`
+3. Never touch .context/ files — Dennis owns those
 4. Commit messages follow conventional commits: `feat:`, `fix:`, `chore:`
    with module scope where relevant, e.g. `feat(comply): add export button`
 5. After completing a batch of work, summarise what was done

@@ -33,12 +33,19 @@ _This is the only code item currently approved by Dennis. Check feedback files f
 
 ---
 
-## Feedback Files
+## Feedback
 
-- `feedback/karen/sprint-4-design.md` — Karen's design review items
-- `feedback/karthik/sprint-4-qa.md` — Karthik's QA/technical review items
+Karen and Karthik submit feedback via **GitHub Issues** using issue templates:
+- **Design Feedback (Karen)** — UI, brand, Figma mockups
+- **QA Report (Karthik)** — bugs, technical issues, QA findings
 
-Only implement items where Dennis Decision = **Accept**.
+Dennis reviews and labels each issue:
+- `accept` — implement this sprint
+- `reject` — won't implement (reason in comment)
+- `defer` — good idea, not this sprint
+
+**Only implement issues labelled `accept`.**
+Check with: `gh issue list --label accept`
 
 ---
 

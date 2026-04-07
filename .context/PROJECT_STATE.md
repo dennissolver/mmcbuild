@@ -40,7 +40,7 @@ _Items approved by Dennis, ready for Claude Code to action this session._
 |---|--------|------|--------|----------|
 | 1 | — | Material/system selection panel | MMC Build | Critical — gates downstream module personalisation |
 
-_Check `feedback/karen/sprint-4-design.md` and `feedback/karthik/sprint-4-qa.md` for newly accepted items before starting._
+_Check GitHub Issues for newly accepted items: `gh issue list --label accept`_
 
 ---
 
@@ -110,8 +110,8 @@ _Full log in `.context/DECISIONS.md`_
 | Person | GitHub | Role | Repo Access |
 |--------|--------|------|-------------|
 | Dennis McMahon | @dennissolver | Developer / Owner | Full |
-| Karen Van Den Engen | TBC | Client / Co-founder | `/feedback/karen/` only |
-| Karthik Rao | TBC | Technical Co-founder | `/feedback/karthik/` only |
+| Karen Van Den Engen | TBC | Client / Co-founder | GitHub Issues only (Design Feedback template) |
+| Karthik Rao | TBC | Technical Co-founder | GitHub Issues only (QA Report template) |
 
 ---
 
