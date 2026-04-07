@@ -17,9 +17,9 @@ Resolve client feedback from v0.1.0-v0.3.0 reviews. Close blocking items before 
 
 | # | Item | Module | Priority | Status |
 |---|------|--------|----------|--------|
-| 1 | Material/system selection panel | MMC Build | Critical | Not started |
+| — | No pending code items | — | — | — |
 
-_This is the only code item currently approved by Dennis. Check feedback files for newly accepted items before starting._
+_All code items from previous sprints are shipped. Check GitHub Issues for newly accepted items: `gh issue list --label accept`_
 
 ---
 
@@ -51,7 +51,11 @@ Check with: `gh issue list --label accept`
 
 ## Done This Sprint
 
-_Nothing yet._
+- Context file consolidation (deleted 3 obsolete .md files, trimmed CLAUDE_CODE_PROMPT)
+- GitHub Issue Templates for Karen (design) and Karthik (QA)
+- `/review` dashboard page — styled sprint review UI for Karen and Karthik
+- Fixed Vercel build failure (dynamic import for @platform-trust/security-gate)
+- Verified material/system selection panel already shipped in v0.3.0 — updated docs
 
 ---
 

@@ -15,7 +15,7 @@ Client feedback and iteration phase (Stages 0–5 complete as of Week 5)
 | Module       | Status        | Notes                                                              |
 |--------------|---------------|--------------------------------------------------------------------|
 | MMC Comply   | ✅ Live        | NCC compliance AI + RAG pipeline operational                       |
-| MMC Build    | ⚠️ Partial     | Core live — material/system selection panel pending (blocks downstream personalisation) |
+| MMC Build    | ✅ Live        | Design optimisation + 3D viewer + system selection panel operational                    |
 | MMC Quote    | ✅ Live        | Supplier spec knowledge base operational                           |
 | MMC Direct   | ✅ Live        | Trade/consultant directory operational                             |
 | MMC Train    | ✅ Live        | Self-paced modules + progress tracking operational                 |
@@ -38,7 +38,7 @@ _Items approved by Dennis, ready for Claude Code to action this session._
 
 | # | Source | Item | Module | Priority |
 |---|--------|------|--------|----------|
-| 1 | — | Material/system selection panel | MMC Build | Critical — gates downstream module personalisation |
+| — | — | No pending code items | — | — |
 
 _Check GitHub Issues for newly accepted items: `gh issue list --label accept`_
 
@@ -49,7 +49,9 @@ _Check GitHub Issues for newly accepted items: `gh issue list --label accept`_
 | Version | Description |
 |---------|-------------|
 | v0.3.0 | All Sprint 3 code items shipped in single deployment commit |
+| v0.3.0 | Material/system selection panel — 6-system toggle, JSONB storage, injected into Comply/Build/Quote AI prompts |
 | v0.3.0 | All six modules built and deployed simultaneously |
+| v0.4.0 | Context consolidation, GitHub Issue templates for Karen/Karthik, /review dashboard page |
 | Stages 0–5 | Complete by Week 5 of 14-week contract |
 
 ---
