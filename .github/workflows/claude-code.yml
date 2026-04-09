@@ -25,6 +25,10 @@ on:
         required: false
         type: string
         default: 'standard'
+      project_id:
+        description: 'Project ID for session context retrieval'
+        required: false
+        type: string
 
 permissions:
   contents: write
@@ -50,13 +54,45 @@ jobs:
       - name: Install Claude Code
         run: npm install -g @anthropic-ai/claude-code
 
+      - name: Fetch session context
+        if: inputs.project_id != ''
+        env:
+          PROJECT_ID: ${{ inputs.project_id }}
+          CALLBACK_URL: ${{ inputs.callback_url }}
+          ECC_API_KEY: ${{ secrets.EASY_CLAUDE_API_KEY }}
+        run: |
+          HTTP_CODE=$(curl -s -o /tmp/session-context.md -w "%{http_code}" \
+            -H "X-API-Key: $ECC_API_KEY" \
+            "$CALLBACK_URL/api/sessions/context?project_id=$PROJECT_ID")
+          if [ "$HTTP_CODE" = "200" ] && [ -s /tmp/session-context.md ]; then
+            echo "Session context fetched ($(wc -c < /tmp/session-context.md) bytes)"
+          else
+            echo "No session context available (HTTP $HTTP_CODE)"
+            rm -f /tmp/session-context.md
+          fi
+
+      - name: Inject session context
+        if: inputs.project_id != ''
+        run: |
+          if [ -f /tmp/session-context.md ] && [ -s /tmp/session-context.md ]; then
+            if [ -f CLAUDE.md ]; then
+              cat /tmp/session-context.md CLAUDE.md > /tmp/merged-claude.md
+              mv /tmp/merged-claude.md CLAUDE.md
+            else
+              cp /tmp/session-context.md CLAUDE.md
+            fi
+            echo "Session context injected into CLAUDE.md"
+          else
+            echo "No session context to inject"
+          fi
+
       - name: Notify started
         if: inputs.callback_url && inputs.command_id
         run: |
           curl -s -X PATCH "${{ inputs.callback_url }}/api/dispatch/poll" \
             -H "Content-Type: application/json" \
             -H "X-API-Key: ${{ secrets.EASY_CLAUDE_API_KEY }}" \
-            -d "{\"command_id\": \"${{ inputs.command_id }}\"}" \
+            -d "{\\"command_id\\": \\"${{ inputs.command_id }}\\"}" \
             || true
 
       - name: Write safety settings
