@@ -1,5 +1,5 @@
 # MMC Build — Project State
-_Last updated: 2026-04-08 by Dennis McMahon_
+_Last updated: 2026-04-13 by Dennis McMahon_
 _Engagement: GBTA-MMC-2026-001_
 
 ---
@@ -27,9 +27,10 @@ Client feedback and iteration phase (Stages 0–5 complete as of Week 5)
 
 | Item | Owner | Due | Status |
 |------|-------|-----|--------|
-| Figma design mockups (correct versions) | Karen Van Den Engen | Overdue | ❌ Not received |
-| AusIndustry R&D Tax Incentive registration | Karen + accountant | **30 Apr 2026 HARD DEADLINE** | ⚠️ In progress |
+| Figma design mockups (correct versions) | Karen Van Den Engen | 13 Apr 2026 | ✅ Received — Direct + Train mockups shared via Figma (SCRUM-75 In Review) |
+| AusIndustry R&D Tax Incentive registration | Karen + accountant | **FY2025-26 claim** | ⚠️ In progress — Intellect Labs confirmed 30 Apr deadline is FY2024-25 only; MMC Build claims FY2025-26 |
 | Sprint 4 QA sign-off | Karthik Rao | TBC | ⏳ Pending |
+| Beta user recruitment (5 per persona) | Karen Van Den Engen | TBC | ⏳ In progress (SCRUM-78) |
 
 ---
 
@@ -52,6 +53,7 @@ _Check GitHub Issues for newly accepted items: `gh issue list --label accept`_
 | v0.3.0 | Material/system selection panel — 6-system toggle, JSONB storage, injected into Comply/Build/Quote AI prompts |
 | v0.3.0 | All six modules built and deployed simultaneously |
 | v0.4.0 | Context consolidation, GitHub Issue templates for Karen/Karthik, /review dashboard page |
+| v0.4.0 | SCRUM-76 closed — Build material selection sub-page not needed; main Build page covers design outcomes |
 | Stages 0–5 | Complete by Week 5 of 14-week contract |
 
 ---
